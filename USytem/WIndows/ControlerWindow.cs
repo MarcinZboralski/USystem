@@ -24,7 +24,7 @@ namespace USytem.WIndows
 
         private void createNewUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Program.CurrentUser.UserPerision.CreateUsers)
+            if (Program.CurrentUser.UserPermision.CreateUsers || Program.CurrentUser.UserPermision.Admin)
             {
                 if (Program.UserCreatorWindow.Visible == false)
                 {
@@ -39,6 +39,7 @@ namespace USytem.WIndows
 
         private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Program.UserCreatorWindow.Clear();
             Program.Logout();
         }
 

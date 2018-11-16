@@ -30,7 +30,7 @@ namespace USytem.WIndows
         {
             if (UsersDatabase.CheckUser(textBox1.Text, PasswordLabel.Text))
             {
-                Program.CurrentUser = UsersDatabase.GetTargetUser(textBox1.Text, PasswordLabel.Text);
+                Program.CurrentUser = UsersDatabase.GetTargetUser(textBox1.Text);
                 Program.ControlerWindow.Show();
                 Hide();
             }

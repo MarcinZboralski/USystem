@@ -10,13 +10,18 @@ namespace USytem.User
     {
         public string Login;
         public string Password;
-        public UserPerision UserPerision = new UserPerision();
+        public UserPermision UserPermision = new UserPermision();
 
     }
 
     [Serializable]
-    public class UserPerision
+    public class UserPermision
     {
+        public bool Admin = false;
         public bool CreateUsers = false;
+        public bool Replenishment = false;
+        public bool CreateOrders = false;
+        public bool ChangeOrders = false;
+        public bool Priority = false;
     }
 }

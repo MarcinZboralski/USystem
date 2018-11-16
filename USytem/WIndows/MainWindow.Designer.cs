@@ -59,7 +59,7 @@
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PasswordLabel.Location = new System.Drawing.Point(361, 329);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.PasswordChar = '-';
+            this.PasswordLabel.PasswordChar = '*';
             this.PasswordLabel.Size = new System.Drawing.Size(352, 30);
             this.PasswordLabel.TabIndex = 2;
             this.PasswordLabel.TextChanged += new System.EventHandler(this.PasswordLabel_TextChanged);
