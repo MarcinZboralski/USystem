@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using USytem.SaveData;
 
 namespace USytem.User
 {
@@ -20,7 +22,20 @@ namespace USytem.User
 
             user.UserPermision.CreateUsers = true;
 
+            foreach (var v in Users)
+            {
+                if (v.Login == "admin")
+                {
+                    return;
+                }
+            }
+
             Users.Add(user);
+
+            if (!File.Exists(Application.UserAppDataPath + "/Users.xml"))
+            {
+                Save();
+            }
         }
 
         public static bool CheckUser(string login, string password)
@@ -37,6 +52,22 @@ namespace USytem.User
             }
 
             return value;
+        }
+
+        public static void DeleteUser(string login)
+        {
+            for (int i = 0; i < Users.Count; i++)
+            {
+                if (Users[i].Login == login)
+                {
+                    Users.RemoveAt(i);
+                    Save();
+                    MessageBox.Show(login + ": Has Been Deleted");
+                    return;
+                }
+            }
+
+            MessageBox.Show("Account With This Login Exist");
         }
 
         public static User CreateUser(string login,string password)
@@ -115,6 +146,16 @@ namespace USytem.User
             }
 
             MessageBox.Show("User Not Found");
+        }
+
+        public static void Save()
+        {
+            SaveUsers.Save(Users);
+        }
+
+        public static void Load()
+        {
+            SaveUsers.Load(out Users);
         }
 
     }

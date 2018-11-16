@@ -43,6 +43,7 @@ namespace USytem.WIndows
 
         public void UpdateAll()
         {
+            UsersDatabase.Load();
             UpdateLeft();
         }
 
@@ -86,13 +87,27 @@ namespace USytem.WIndows
 
         private void UpdateUser_Click(object sender, EventArgs e)
         {
+            if (permLogin.Text == null || permPassword.Text == null)
+            {
+                return;
+            }
+
             UsersDatabase.UpdateUser(SearcherUserTextField.Text, permLogin.Text, permPassword.Text,GetPermision());
+            UsersDatabase.Save();
+            UsersDatabase.Load();
             UpdateAll();
         }
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
+            if (permLogin.Text == null || permPassword.Text == null)
+            {
+                return;
+            }
+
             UsersDatabase.CreateUser(permLogin.Text, permPassword.Text,GetPermision());
+            UsersDatabase.Save();
+            UsersDatabase.Load();
             UpdateAll();
         }
 
@@ -128,6 +143,17 @@ namespace USytem.WIndows
         private void SearcherUserTextField_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteUserButton_Click(object sender, EventArgs e)
+        {
+            UsersDatabase.DeleteUser(SearcherUserTextField.Text);
+            UpdateAll();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace USytem.WIndows
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-
+            UsersDatabase.Load();
         }
 
         //Login

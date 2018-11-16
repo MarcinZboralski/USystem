@@ -23,7 +23,6 @@ namespace USytem
         static void Main()
         {
             UsersDatabase.CreateAdmin();
-            UsersDatabase.CreateUser("rem","123");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);

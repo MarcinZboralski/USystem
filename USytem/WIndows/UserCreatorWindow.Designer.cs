@@ -34,22 +34,24 @@
             this.Login = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Password = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView1 = new System.Windows.Forms.ListView();
-            this.SearcherUserTextField = new System.Windows.Forms.TextBox();
-            this.SearcherUserButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.permLogin = new System.Windows.Forms.TextBox();
-            this.permPassword = new System.Windows.Forms.TextBox();
-            this.permAdmin = new System.Windows.Forms.CheckBox();
-            this.permCreateUsers = new System.Windows.Forms.CheckBox();
-            this.permReplenishment = new System.Windows.Forms.CheckBox();
-            this.permCreateOrders = new System.Windows.Forms.CheckBox();
-            this.permChangeOrders = new System.Windows.Forms.CheckBox();
-            this.permPriority = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.CreateButton = new System.Windows.Forms.Button();
             this.UpdateUser = new System.Windows.Forms.Button();
+            this.CreateButton = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.permPriority = new System.Windows.Forms.CheckBox();
+            this.permChangeOrders = new System.Windows.Forms.CheckBox();
+            this.permCreateOrders = new System.Windows.Forms.CheckBox();
+            this.permReplenishment = new System.Windows.Forms.CheckBox();
+            this.permCreateUsers = new System.Windows.Forms.CheckBox();
+            this.permAdmin = new System.Windows.Forms.CheckBox();
+            this.permPassword = new System.Windows.Forms.TextBox();
+            this.permLogin = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SearcherUserButton = new System.Windows.Forms.Button();
+            this.SearcherUserTextField = new System.Windows.Forms.TextBox();
+            this.DeleteUserButton = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,6 +72,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.textBox4);
+            this.splitContainer1.Panel2.Controls.Add(this.DeleteUserButton);
             this.splitContainer1.Panel2.Controls.Add(this.UpdateUser);
             this.splitContainer1.Panel2.Controls.Add(this.CreateButton);
             this.splitContainer1.Panel2.Controls.Add(this.textBox3);
@@ -135,107 +139,45 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // SearcherUserTextField
+            // UpdateUser
             // 
-            this.SearcherUserTextField.Location = new System.Drawing.Point(68, 35);
-            this.SearcherUserTextField.Name = "SearcherUserTextField";
-            this.SearcherUserTextField.Size = new System.Drawing.Size(216, 20);
-            this.SearcherUserTextField.TabIndex = 0;
-            this.SearcherUserTextField.TextChanged += new System.EventHandler(this.SearcherUserTextField_TextChanged);
+            this.UpdateUser.Location = new System.Drawing.Point(182, 223);
+            this.UpdateUser.Name = "UpdateUser";
+            this.UpdateUser.Size = new System.Drawing.Size(119, 25);
+            this.UpdateUser.TabIndex = 15;
+            this.UpdateUser.Text = "Update User";
+            this.UpdateUser.UseVisualStyleBackColor = true;
+            this.UpdateUser.Click += new System.EventHandler(this.UpdateUser_Click);
             // 
-            // SearcherUserButton
+            // CreateButton
             // 
-            this.SearcherUserButton.Location = new System.Drawing.Point(287, 34);
-            this.SearcherUserButton.Name = "SearcherUserButton";
-            this.SearcherUserButton.Size = new System.Drawing.Size(125, 21);
-            this.SearcherUserButton.TabIndex = 1;
-            this.SearcherUserButton.Text = "Find User";
-            this.SearcherUserButton.UseVisualStyleBackColor = true;
-            this.SearcherUserButton.Click += new System.EventHandler(this.button1_Click);
+            this.CreateButton.Location = new System.Drawing.Point(293, 223);
+            this.CreateButton.Name = "CreateButton";
+            this.CreateButton.Size = new System.Drawing.Size(119, 25);
+            this.CreateButton.TabIndex = 14;
+            this.CreateButton.Text = "Create User";
+            this.CreateButton.UseVisualStyleBackColor = true;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
-            // button1
+            // textBox3
             // 
-            this.button1.Location = new System.Drawing.Point(399, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 20);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Update Window";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.textBox3.Location = new System.Drawing.Point(287, 106);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(125, 20);
+            this.textBox3.TabIndex = 13;
+            this.textBox3.Text = "Password";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button2
+            // textBox2
             // 
-            this.button2.Location = new System.Drawing.Point(269, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 20);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Exit Window";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // permLogin
-            // 
-            this.permLogin.Location = new System.Drawing.Point(68, 80);
-            this.permLogin.Name = "permLogin";
-            this.permLogin.Size = new System.Drawing.Size(216, 20);
-            this.permLogin.TabIndex = 4;
-            // 
-            // permPassword
-            // 
-            this.permPassword.Location = new System.Drawing.Point(68, 106);
-            this.permPassword.Name = "permPassword";
-            this.permPassword.Size = new System.Drawing.Size(216, 20);
-            this.permPassword.TabIndex = 5;
-            // 
-            // permAdmin
-            // 
-            this.permAdmin.AutoSize = true;
-            this.permAdmin.Location = new System.Drawing.Point(68, 132);
-            this.permAdmin.Name = "permAdmin";
-            this.permAdmin.Size = new System.Drawing.Size(55, 17);
-            this.permAdmin.TabIndex = 6;
-            this.permAdmin.Text = "Admin";
-            this.permAdmin.UseVisualStyleBackColor = true;
-            // 
-            // permCreateUsers
-            // 
-            this.permCreateUsers.AutoSize = true;
-            this.permCreateUsers.Location = new System.Drawing.Point(68, 155);
-            this.permCreateUsers.Name = "permCreateUsers";
-            this.permCreateUsers.Size = new System.Drawing.Size(87, 17);
-            this.permCreateUsers.TabIndex = 7;
-            this.permCreateUsers.Text = "Create Users";
-            this.permCreateUsers.UseVisualStyleBackColor = true;
-            // 
-            // permReplenishment
-            // 
-            this.permReplenishment.AutoSize = true;
-            this.permReplenishment.Location = new System.Drawing.Point(68, 178);
-            this.permReplenishment.Name = "permReplenishment";
-            this.permReplenishment.Size = new System.Drawing.Size(96, 17);
-            this.permReplenishment.TabIndex = 8;
-            this.permReplenishment.Text = "Replenishment";
-            this.permReplenishment.UseVisualStyleBackColor = true;
-            // 
-            // permCreateOrders
-            // 
-            this.permCreateOrders.AutoSize = true;
-            this.permCreateOrders.Location = new System.Drawing.Point(204, 132);
-            this.permCreateOrders.Name = "permCreateOrders";
-            this.permCreateOrders.Size = new System.Drawing.Size(91, 17);
-            this.permCreateOrders.TabIndex = 9;
-            this.permCreateOrders.Text = "Create Orders";
-            this.permCreateOrders.UseVisualStyleBackColor = true;
-            // 
-            // permChangeOrders
-            // 
-            this.permChangeOrders.AutoSize = true;
-            this.permChangeOrders.Location = new System.Drawing.Point(204, 155);
-            this.permChangeOrders.Name = "permChangeOrders";
-            this.permChangeOrders.Size = new System.Drawing.Size(97, 17);
-            this.permChangeOrders.TabIndex = 10;
-            this.permChangeOrders.Text = "Change Orders";
-            this.permChangeOrders.UseVisualStyleBackColor = true;
+            this.textBox2.Location = new System.Drawing.Point(287, 80);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(125, 20);
+            this.textBox2.TabIndex = 12;
+            this.textBox2.Text = "Login";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // permPriority
             // 
@@ -248,45 +190,129 @@
             this.permPriority.Text = "Priority";
             this.permPriority.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // permChangeOrders
             // 
-            this.textBox2.Location = new System.Drawing.Point(287, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(125, 20);
-            this.textBox2.TabIndex = 12;
-            this.textBox2.Text = "Login";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.permChangeOrders.AutoSize = true;
+            this.permChangeOrders.Location = new System.Drawing.Point(204, 155);
+            this.permChangeOrders.Name = "permChangeOrders";
+            this.permChangeOrders.Size = new System.Drawing.Size(97, 17);
+            this.permChangeOrders.TabIndex = 10;
+            this.permChangeOrders.Text = "Change Orders";
+            this.permChangeOrders.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // permCreateOrders
             // 
-            this.textBox3.Location = new System.Drawing.Point(287, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(125, 20);
-            this.textBox3.TabIndex = 13;
-            this.textBox3.Text = "Password";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.permCreateOrders.AutoSize = true;
+            this.permCreateOrders.Location = new System.Drawing.Point(204, 132);
+            this.permCreateOrders.Name = "permCreateOrders";
+            this.permCreateOrders.Size = new System.Drawing.Size(91, 17);
+            this.permCreateOrders.TabIndex = 9;
+            this.permCreateOrders.Text = "Create Orders";
+            this.permCreateOrders.UseVisualStyleBackColor = true;
             // 
-            // CreateButton
+            // permReplenishment
             // 
-            this.CreateButton.Location = new System.Drawing.Point(293, 223);
-            this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(119, 25);
-            this.CreateButton.TabIndex = 14;
-            this.CreateButton.Text = "Create User";
-            this.CreateButton.UseVisualStyleBackColor = true;
-            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
+            this.permReplenishment.AutoSize = true;
+            this.permReplenishment.Location = new System.Drawing.Point(68, 178);
+            this.permReplenishment.Name = "permReplenishment";
+            this.permReplenishment.Size = new System.Drawing.Size(96, 17);
+            this.permReplenishment.TabIndex = 8;
+            this.permReplenishment.Text = "Replenishment";
+            this.permReplenishment.UseVisualStyleBackColor = true;
             // 
-            // UpdateUser
+            // permCreateUsers
             // 
-            this.UpdateUser.Location = new System.Drawing.Point(165, 223);
-            this.UpdateUser.Name = "UpdateUser";
-            this.UpdateUser.Size = new System.Drawing.Size(119, 25);
-            this.UpdateUser.TabIndex = 15;
-            this.UpdateUser.Text = "Update User";
-            this.UpdateUser.UseVisualStyleBackColor = true;
-            this.UpdateUser.Click += new System.EventHandler(this.UpdateUser_Click);
+            this.permCreateUsers.AutoSize = true;
+            this.permCreateUsers.Location = new System.Drawing.Point(68, 155);
+            this.permCreateUsers.Name = "permCreateUsers";
+            this.permCreateUsers.Size = new System.Drawing.Size(87, 17);
+            this.permCreateUsers.TabIndex = 7;
+            this.permCreateUsers.Text = "Create Users";
+            this.permCreateUsers.UseVisualStyleBackColor = true;
+            // 
+            // permAdmin
+            // 
+            this.permAdmin.AutoSize = true;
+            this.permAdmin.Location = new System.Drawing.Point(68, 132);
+            this.permAdmin.Name = "permAdmin";
+            this.permAdmin.Size = new System.Drawing.Size(55, 17);
+            this.permAdmin.TabIndex = 6;
+            this.permAdmin.Text = "Admin";
+            this.permAdmin.UseVisualStyleBackColor = true;
+            // 
+            // permPassword
+            // 
+            this.permPassword.Location = new System.Drawing.Point(68, 106);
+            this.permPassword.Name = "permPassword";
+            this.permPassword.Size = new System.Drawing.Size(216, 20);
+            this.permPassword.TabIndex = 5;
+            // 
+            // permLogin
+            // 
+            this.permLogin.Location = new System.Drawing.Point(68, 80);
+            this.permLogin.Name = "permLogin";
+            this.permLogin.Size = new System.Drawing.Size(216, 20);
+            this.permLogin.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(269, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 20);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Exit Window";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(399, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 20);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Update Window";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // SearcherUserButton
+            // 
+            this.SearcherUserButton.Location = new System.Drawing.Point(287, 53);
+            this.SearcherUserButton.Name = "SearcherUserButton";
+            this.SearcherUserButton.Size = new System.Drawing.Size(125, 21);
+            this.SearcherUserButton.TabIndex = 1;
+            this.SearcherUserButton.Text = "Find User";
+            this.SearcherUserButton.UseVisualStyleBackColor = true;
+            this.SearcherUserButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // SearcherUserTextField
+            // 
+            this.SearcherUserTextField.Location = new System.Drawing.Point(68, 54);
+            this.SearcherUserTextField.Name = "SearcherUserTextField";
+            this.SearcherUserTextField.Size = new System.Drawing.Size(216, 20);
+            this.SearcherUserTextField.TabIndex = 0;
+            this.SearcherUserTextField.TextChanged += new System.EventHandler(this.SearcherUserTextField_TextChanged);
+            // 
+            // DeleteUserButton
+            // 
+            this.DeleteUserButton.Location = new System.Drawing.Point(68, 223);
+            this.DeleteUserButton.Name = "DeleteUserButton";
+            this.DeleteUserButton.Size = new System.Drawing.Size(119, 25);
+            this.DeleteUserButton.TabIndex = 16;
+            this.DeleteUserButton.Text = "Delete User";
+            this.DeleteUserButton.UseVisualStyleBackColor = true;
+            this.DeleteUserButton.Click += new System.EventHandler(this.DeleteUserButton_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox4.Location = new System.Drawing.Point(68, 28);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(216, 20);
+            this.textBox4.TabIndex = 17;
+            this.textBox4.Text = "To Find Or Change";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // UserCreatorWindow
             // 
@@ -337,5 +363,7 @@
         private System.Windows.Forms.Button CreateButton;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button DeleteUserButton;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
