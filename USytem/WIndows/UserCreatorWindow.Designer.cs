@@ -34,6 +34,8 @@
             this.Login = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Password = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView1 = new System.Windows.Forms.ListView();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.DeleteUserButton = new System.Windows.Forms.Button();
             this.UpdateUser = new System.Windows.Forms.Button();
             this.CreateButton = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SearcherUserButton = new System.Windows.Forms.Button();
             this.SearcherUserTextField = new System.Windows.Forms.TextBox();
-            this.DeleteUserButton = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -138,6 +138,28 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox4.Location = new System.Drawing.Point(68, 28);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(216, 20);
+            this.textBox4.TabIndex = 17;
+            this.textBox4.Text = "To Find Or Change";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // DeleteUserButton
+            // 
+            this.DeleteUserButton.Location = new System.Drawing.Point(68, 223);
+            this.DeleteUserButton.Name = "DeleteUserButton";
+            this.DeleteUserButton.Size = new System.Drawing.Size(119, 25);
+            this.DeleteUserButton.TabIndex = 16;
+            this.DeleteUserButton.Text = "Delete User";
+            this.DeleteUserButton.UseVisualStyleBackColor = true;
+            this.DeleteUserButton.Click += new System.EventHandler(this.DeleteUserButton_Click);
             // 
             // UpdateUser
             // 
@@ -291,28 +313,6 @@
             this.SearcherUserTextField.Size = new System.Drawing.Size(216, 20);
             this.SearcherUserTextField.TabIndex = 0;
             this.SearcherUserTextField.TextChanged += new System.EventHandler(this.SearcherUserTextField_TextChanged);
-            // 
-            // DeleteUserButton
-            // 
-            this.DeleteUserButton.Location = new System.Drawing.Point(68, 223);
-            this.DeleteUserButton.Name = "DeleteUserButton";
-            this.DeleteUserButton.Size = new System.Drawing.Size(119, 25);
-            this.DeleteUserButton.TabIndex = 16;
-            this.DeleteUserButton.Text = "Delete User";
-            this.DeleteUserButton.UseVisualStyleBackColor = true;
-            this.DeleteUserButton.Click += new System.EventHandler(this.DeleteUserButton_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox4.Location = new System.Drawing.Point(68, 28);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(216, 20);
-            this.textBox4.TabIndex = 17;
-            this.textBox4.Text = "To Find Or Change";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // UserCreatorWindow
             // 

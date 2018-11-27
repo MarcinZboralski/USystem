@@ -32,6 +32,7 @@ namespace USytem.WIndows
             {
                 Program.CurrentUser = UsersDatabase.GetTargetUser(textBox1.Text);
                 Program.ControlerWindow.Show();
+                Program.ControlerWindow.Update();
                 Hide();
             }
             else

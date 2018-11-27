@@ -82,6 +82,7 @@ namespace USytem.WIndows
         private void button2_Click(object sender, EventArgs e)
         {
             Clear();
+            Program.ControlerWindow.Update();
             Hide();
         }
 
